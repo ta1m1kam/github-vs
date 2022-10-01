@@ -10,9 +10,7 @@ type PropTypes = {
 
 const PlayerInput = ({ label, onSubmit }: PropTypes) => {
   const [username, setUsername] = useState('')
-  const [search, { loading, data: userInfo, error }] = useLazyQuery(USER_INFO, {
-    variables: { username },
-  })
+  const [search, { loading, data: userInfo, error }] = useLazyQuery(USER_INFO)
 
   const handleSubmit = async (event: any) => {
     event.preventDefault()

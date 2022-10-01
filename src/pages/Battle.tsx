@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import PlayerInput from '../components/Battle/PlayerInput'
 import PlayerPreview from '../components/Battle/PlayerPreview'
 
@@ -35,6 +36,17 @@ const Battle = () => {
             <PlayerInput label="Player2" onSubmit={setPlayerTwo} />
           )}
         </div>
+        {playerOne && playerTwo && (
+          <Link
+            className="btn dark-btn btn-space"
+            to={{
+              pathname: '/result',
+              search: `?playerOne=${playerOne.login}&playerTwo=${playerTwo.login}`,
+            }}
+          >
+            Battle
+          </Link>
+        )}
       </div>
     </>
   )
