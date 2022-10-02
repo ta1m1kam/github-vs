@@ -1,6 +1,5 @@
 export const scoreCalculate = (battleProfile: BattleProfile) => {
   if (!battleProfile) return 0
-  console.log(battleProfile)
 
   const score =
     battleProfile?.followers.totalCount *

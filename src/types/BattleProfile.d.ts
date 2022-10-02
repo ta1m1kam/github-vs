@@ -1,10 +1,12 @@
 type BattleProfile = {
   name: string
   url: string
+  avatarUrl: string
   repositories: Repositories
   followers: {
     totalCount: number
   }
+  score: number
 } | null
 
 type Repository = {

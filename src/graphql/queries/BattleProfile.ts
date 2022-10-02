@@ -5,6 +5,7 @@ export const BATTLE_PROFILE = gql`
     user(login: $username) {
       name
       url
+      avatarUrl
       repositories(last: 100, orderBy: { field: STARGAZERS, direction: ASC }) {
         totalCount
         nodes {
